@@ -1,0 +1,251 @@
+/**
+ * Design Then Code
+ * (c) Mike Rundle, 2010
+ */
+
+html, body, h1, h2, h3, h4, h5, h6, form, input, ul, ol, p, fieldset { padding: 0; margin: 0; }
+
+/* HTML5 block-level reset for enhanced structural tag support in older browsers */
+header, footer, section, aside, nav, article, figure { display: block; }
+
+html {
+	padding: 25px;
+	background: #f3f3f3; }
+
+body {
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border: 10px solid #b1bdc4;
+	font: normal 14px/1.6em "Lucida Grande", "Lucida Sans Unicode", "Verdana", sans-serif;
+	color: #46555a;
+	background: #fff; }
+	
+	@media print {
+		body {
+			-webkit-border-radius: 0;
+			-moz-border-radius: 0;
+			border: 0; }
+	}
+	
+article {
+	width: 620px;
+	margin: 0 auto;
+	padding: 50px 0; }
+	
+	article a {
+		font-weight: bold;
+		color: #a93c3c; }
+		
+		article a:hover {
+			color: #f00; }
+			
+article .preview_draft {
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	margin: 0 0 16px 0;
+	background: #fff3c5;
+	padding: 10px 10px 7px 10px;
+	color: #a58507;
+	font-size: 12px; }
+	
+	.preview_draft a {
+		color: #7b6200; }
+	
+figure {
+	position: relative;
+	width: 850px;
+	left: -120px;
+	right: -120px;
+	text-align: center;
+	border-top: double #d6dadc;
+	border-bottom: double #d6dadc;
+	padding: 1.8em 0;
+	margin: 0 0 1.8em 0; }
+	
+	figure figcaption {
+		display: block;
+		padding: 0 0 5px 0;
+		margin: 0;
+		font-size: 12px;
+		color: #888; }
+	
+aside {
+	display: block;
+	margin: 1.8em -10px 1.8em -10px;
+	text-shadow: rgba(255,255,255,.8) 0 1px 0;
+	padding: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	background: #e9f4f8; }
+	
+	aside.right {
+		width: 280px;
+		float: right;
+		margin: 5px -50px 1.8em 1.8em; }
+	
+	aside.left {
+		width: 280px;
+		float: left;
+		margin: 5px 1.8em 1.8em -50px; }
+		
+		aside p {
+			color: #596f77;
+			line-height: 1.5em;
+			padding-bottom: 0;
+			margin-bottom: 8px;
+			font-size: 12px; }
+			
+		aside p:last-child {
+			margin-bottom: 0; }
+			
+	aside h3 {
+		font: bold 12px "Lucida Grande", "Lucida Sans Unicode", "Verdana", sans-serif;
+		padding: 0;
+		color: #3a545e;
+		margin: 0 0 3px 0; }
+	
+code {
+	font-family: "Menlo", "Monaco", "Courier", monospace;
+	color: #333; }
+	
+	code a {
+		text-decoration: underline; }
+	
+pre {
+	display: block;
+	margin: 0 -20px 25px -20px;
+	padding: 20px;
+	background: #fffdfa;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border: 1px solid #f5ead7;
+	border-radius: 10px;
+	text-shadow: #fcf9f3 0 1px 0;
+	overflow: auto; }
+	
+	pre.inline {
+		padding: 0;
+		margin: 0;
+		overflow: auto;
+		display: inline;
+		background: transparent !important; }
+	
+	/* Thanks Tim! */
+	pre::-webkit-scrollbar {
+	    width: 8px;
+	    height: 8px; }
+
+	pre::-webkit-scrollbar-button:start:decrement, pre::-webkit-scrollbar-button:end:increment {
+	    display: none; }
+
+	pre::-webkit-scrollbar-button:vertical:increment {
+	    background: transparent; }
+
+	pre::-webkit-scrollbar-track-piece {
+	    background: transparent;
+	    -webkit-border-radius: 12px; }
+
+	pre::-webkit-scrollbar-thumb:horizontal {
+	    width: 50px;
+	    background: #d4c1a0;
+		border: 1px solid #c4ac83;
+	    -webkit-border-radius: 8px; }
+	
+ol {
+	margin: 0 0 0 40px;
+	padding: 0; }	
+	
+ul {
+	list-style: square;
+	padding-bottom: 0;
+	margin: 0 0 0 40px; }
+	
+	ul li, ol li {
+		padding-bottom: 1.8em;
+		margin-bottom: 0; }
+	
+p {
+	padding: 0;
+	margin: 0 0 1.8em 0; }	
+	
+	p img {
+		margin: 25px; }
+		
+		p img.left {
+			float: left;
+			margin-left: 0; }
+			
+		p img.right {
+			float: right;
+			margin-top: -20px;
+			margin-left: 30px; }
+			
+blockquote {
+	padding: 0;
+	margin: 0 25px; }
+	
+	blockquote p {
+		font: normal 14px "Palatino", "Georgia", serif; }
+	
+h1, h2, h3 {
+	color: #000; }	
+		
+h1 {
+	font: bold 24px/1em "Helvetica Neue", "Arial", sans-serif;
+	padding: 0;
+	margin: 0 0 18px 0; }
+	
+	h1 em {
+		display: block;
+		font: normal 14px "Helvetica Neue", "Arial", sans-serif;
+		color: #bbb;
+		padding-top: 5px; }
+		
+		h1 em a {
+			color: #bbb; }
+	
+h2 {
+	position: relative;
+	font: bold 18px/1em "Helvetica Neue", "Arial", sans-serif;
+	padding: 0 0 15px;
+	border-bottom: 1px solid #eee;;
+	margin: 0 0 15px 0; }
+	
+	h2 em {
+		color: #888;
+		font-style: normal;
+		font-weight: normal; }
+	
+	h2.skill_level span {
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		text-shadow: #fff 0 1px 0;
+		background: #ffffff;
+		background: -moz-linear-gradient(top, #ffffff 0%, #EEE 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#EEE));
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#EEE',GradientType=0 );
+		border: 1px solid #ddd;
+		-webkit-border-radius: 15px;
+		-moz-border-radius: 15px;
+		border-radius: 15px;
+		padding: 3px 15px;
+		font: normal 11px "Lucida Grande", "Lucida Sans Unicode", "Verdana", sans-serif;
+		color: #666; }
+	
+h3 {
+	padding: 0;
+	font: bold 16px/1em "Helvetica Neue", "Arial", sans-serif;
+	padding: 0;
+	margin: 0 0 8px 0; }
+	
+h4 {
+	font-weight: bold;
+	padding: 0;
+	font: bold 14px/1em "Lucida Grande", "Lucida Sans Unicode", "Verdana", sans-serif;
+	margin: 0 0 4px 0; }
+	
+p + h1 {
+	margin-top: 60px; }
+
